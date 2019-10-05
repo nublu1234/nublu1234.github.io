@@ -15,14 +15,14 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-facebook
-      link: "#"
+    <!-- - icon: fa-facebook
+      link: "#" -->
     - icon: fa-twitter
-      link: "#"
-    - icon: fa-linkedin
+      link: "https://twitter.com/nublu1234"
+    <!-- - icon: fa-linkedin
       link: "#"
     - icon: fa-stack-exchange
-      link: "#"
+      link: "#" -->
     - icon: fa-github
       link: "https://github.com/nublu1234"
 
