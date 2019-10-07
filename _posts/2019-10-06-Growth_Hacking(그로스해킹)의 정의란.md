@@ -2,7 +2,7 @@
 layout: post
 title:  "Growth Hacking(그로스해킹)의 정의란?"
 date:   2019-10-06 00:00:00 +0700
-categories: [growth_hacking]
+categories: [all, growth_hacking, opinion]
 ---
 
 Viral roop를 강조하던 분도 계셨고,
@@ -13,5 +13,4 @@ Viral roop를 강조하던 분도 계셨고,
 (100이면 100 다 동의할만한 정의는 아니겠지만 상당수가 납득할만한 정의라고 생각한다.)
 
 Growth Hacking(그로스해킹)의 정의가 기업마다 다를 수 있다.
-하지만 그로스해킹은 이전부터 존재하였기에, 그로스해킹의 정의를 축소 or 확대하려고 한다면
-다른 용어로 대체가 (대체적으로) 가능하다고 생각하기에 Growth Hacking(그로스해킹)이라는 용어의 의미가 사라지지 않나 싶다.
+하지만 그로스해킹의 정의를 축소 or 확대하려고 한다면 다른 용어로 대체가 (대체적으로) 가능하다고 생각하기에 Growth Hacking(그로스해킹)이라는 용어의 의미가 사라지지 않나 싶다.
