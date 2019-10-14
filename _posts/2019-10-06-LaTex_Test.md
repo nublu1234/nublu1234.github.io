@@ -7,3 +7,6 @@ categories: [all, etc]
 $x$
 
 $$x + 1$$
+$$ax + b$$  
+$$ax + b$$ 
+$$ax + b$$
