@@ -5,11 +5,11 @@ date:   2019-10-14 00:00:00 +0700
 categories: [all, datascience, machinelearning, statistics, math]
 ---
 
-# Essential Mathematics 4 Data Science
+# Essential Mathematics 4 Data Science  
 
-## Linear Algebra
+## Linear Algebra  
 
-### Vector Space
+### Vector Space  
 $$ \text{(1)} \,
 \boldsymbol{x}+\boldsymbol{y} = \boldsymbol{y}+\boldsymbol{x}
 \\
@@ -32,28 +32,28 @@ c(\boldsymbol{x}+\boldsymbol{y})= c\boldsymbol{x}+c\boldsymbol{y}
 \\
 \text{(8)} \,
 (c_1+c_2)\boldsymbol{y}= c_1\boldsymbol{x}+c_2\boldsymbol{y}
-$$
+$$  
 
-### Vector space of functions
+### Vector space of functions  
 $$(f_1 + f_2)(x)=f_1(x)+f_2(x)\\ \, \\
-(af)x=af(x)$$
+(af)x=af(x)$$  
 
 
-### Linear Map
+### Linear Map  
 $$f(x_1 + x_2)=f(x_1)+f(x_2) \\ \, \\
-f(ax)=af(x)$$
+f(ax)=af(x)$$  
 
 
-### Bases
+### Bases  
 $$
 e_k = \begin{bmatrix} 0 \\ \vdots  \\ 0 \\ 1 \\ 0 \\ \vdots  \\ 0 \end{bmatrix} 
 \\ \, \\
 \boldsymbol{x}=\begin{bmatrix} x_1 \\ x_2  \\  \vdots  \\ x_n \end{bmatrix} 
 \\ \, \\
 \boldsymbol{x}=\sum_{i=1\cdots n}x_{k}e_{k}
-$$
+$$  
 
-### Vector & Matrix Multiplication
+### Vector & Matrix Multiplication  
 $$
 \begin{bmatrix} a_{\cdot 1}  & a_{\cdot 2} & \cdots & a_{\cdot n} \end{bmatrix}
 \begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{bmatrix} 
@@ -62,12 +62,12 @@ $$
 \begin{bmatrix} a_{\cdot 1}  & a_{\cdot 2} & \cdots & a_{\cdot n} \end{bmatrix}
 \begin{bmatrix} x_1 &  y_1 & \cdots & z_1 \\  x_2 &  y_2 & \cdots & z_2 \\ \vdots & \vdots & \ddots  & \vdots \\ x_n & y_n & \cdots & z_n \end{bmatrix}
 = \begin{bmatrix} A\boldsymbol{x} & A\boldsymbol{y} & \cdots & A\boldsymbol{z} \end{bmatrix}
-$$
+$$  
 
 $$\\ \, \\
 AB =\begin{bmatrix} a_1 & a_2 \end{bmatrix}
  \begin{bmatrix}b_1^\top \\ b_2^\top\end{bmatrix}=
-a_1b_1^\top + a_2b_2^\top$$
+a_1b_1^\top + a_2b_2^\top$$  
 
 
 $$
@@ -118,11 +118,11 @@ AB=
 \, & b_{2}^{T} & \,
 \end{matrix}
 }
-$$
+$$  
 
-### Vector & Matrix Calculus
+### Vector & Matrix Calculus  
 
-(1) Scalar to Vector
+(1) Scalar to Vector  
 $$
 \nabla f = 
 \frac{\partial f}{\partial {x}} =
@@ -132,9 +132,9 @@ $$
 \vdots\\
 \dfrac{\partial f}{\partial x_N}\\
 \end{bmatrix}
-$$
+$$  
 
-(2) Linear Model
+(2) Linear Model  
 $$
 f(x) = w^\top x
 \\
@@ -172,9 +172,9 @@ w_2 \\
 w_N \\
 \end{bmatrix}
 = {w}
-$$
+$$  
 
-(3) Quadratic Form
+(3) Quadratic Form  
 $$
 f(x) = x^\top A x
 $$$$
@@ -258,7 +258,7 @@ a_{21}x_1 &+& 2a_{22}x_2 &+& \cdots &+& a_{2N}x_N &+& \\
 ={A} {x} + {A}^\top {x}=
 ({A} + {A}^\top){x}$$  
 
-(4) Vector to Scalar
+(4) Vector to Scalar  
 $$
 {f}(x) =
 \begin{bmatrix}
@@ -267,7 +267,7 @@ f_2 \\
 \vdots\\
 f_M \\
 \end{bmatrix}
-$$
+$$  
 
 $$
 \frac{\partial {f}}{\partial x} =
@@ -277,9 +277,9 @@ $$
 \cdots &
 \dfrac{\partial f_M}{\partial x}
 \end{bmatrix}
-$$
+$$  
 
-(5) Vector to Vector
+(5) Vector to Vector  
 
 $$
 \dfrac{\partial {f}}{\partial {x}}
@@ -301,16 +301,16 @@ $$
 \vdots & \vdots & \ddots & \vdots \\
 \dfrac{\partial f_1}{\partial x_M} & \dfrac{\partial f_2}{\partial x_M} & \cdots & \dfrac{\partial f_N}{\partial x_M} \\
 \end{bmatrix}
-$$
+$$  
 
-(6) $Ax$ to Vector
+(6) $Ax$ to Vector  
 $$
 f(x) = Ax
 $$$$
 \nabla f(x) = \dfrac{\partial ({Ax})}{\partial {x}} = A^\top
-$$
+$$  
 
-(Proof)
+(Proof)  
 $$
 {Ax} = {c_1}x_1 + {c_2}x_2 + \cdots + {c_M}x_M
 \\ \downarrow \\
@@ -334,12 +334,12 @@ $$
 {c_M}^\top
 \end{bmatrix}
 = A^\top
-$$
+$$  
 
-**Jacobian Matrix**
-**Hessian Matrix**
+**Jacobian Matrix**  
+**Hessian Matrix**  
 
-(7) Scalar to Matrix
+(7) Scalar to Matrix  
 $$
 \dfrac{\partial f}{\partial {X}} =
 \begin{bmatrix}
@@ -348,16 +348,16 @@ $$
 \vdots & \vdots & \ddots & \vdots\\
 \dfrac{\partial f}{\partial x_{M,1}} & \dfrac{\partial f}{\partial x_{M,2}} & \cdots & \dfrac{\partial f}{\partial x_{M,N}}\\
 \end{bmatrix}
-$$
+$$  
 
-(8) Log of Determinant
+(8) Log of Determinant  
 $$
 f(X) = \log | {X} |
 $$$$
 \dfrac{\partial f}{\partial X} = \dfrac{\partial \log | {X} | }{\partial {X}} = ({X}^{-1})^\top
-$$
+$$  
 
-(Proof)
+(Proof)  
 
 $$
 \dfrac{\partial}{\partial x_{i,j}} \vert X \vert = C_{i,j}
@@ -365,16 +365,16 @@ $$$$
 \dfrac{\partial}{\partial X} \vert X \vert = C = | X | (X^{-1})^\top
 $$$$
 \dfrac{d}{dx} \log f(x) = \dfrac{f'(x)}{f(x)} = \dfrac{\vert X \vert (X^{-1})^\top}{\vert X \vert} = (X^{-1})^\top
-$$
+$$  
 
-### Linear Map (Linear Transformation)
-A linear map from $V$ to $W$ is a function $T: V \rightarrow W$ with the following properties:
-**additivity**
-$$T(u+v)=T(u)+T(v) \text{ for all} \,u, v \in V$$
-**homogeneity**
-$$T(\lambda v)=\lambda T(v) \text{ for all} \, \lambda \in V \text{ and all} \, v \in V$$
+### Linear Map (Linear Transformation)  
+A linear map from $V$ to $W$ is a function $T: V \rightarrow W$ with the following properties:  
+**additivity**  
+$$T(u+v)=T(u)+T(v) \text{ for all} \,u, v \in V$$  
+**homogeneity**  
+$$T(\lambda v)=\lambda T(v) \text{ for all} \, \lambda \in V \text{ and all} \, v \in V$$  
 
-### Operations
+### Operations  
 $$
 \text{Transpose: }[A^\top]_{ij} = A_{ji} 
 \\ 
@@ -385,14 +385,14 @@ $$
 \text{Scalar multiplication: }[aA]_{ij} = aA_{ij} 
 \\
 \text{Matrix multiplication: }[AB]_{ij} = \sum_{k}A_{ik}B_{kj}
-$$
+$$  
 
-### Special Matrices
+### Special Matrices  
 $$\text{Zero Matrix: }0_{ij}
 \\ 
-\text{Unit Matrix: } I_n$$
+\text{Unit Matrix: } I_n$$  
 
-### Determinant
+### Determinant  
 $$
 det(A) \in R \, (\text{or } C) 
 \\
@@ -406,15 +406,15 @@ det \begin{bmatrix} a_{\cdot 1}   \cdots  a_{\cdot i}  \cdots  a_{\cdot k} \cdot
 det(AB)=det(A) \cdot det(B)
 \\
 \text{The matrix }A \text{ is invertible iff } detA = 0.  \text{ We call such a matrix non-singular.}
-$$
-> $U$: Upper Triangle Matrix
+$$  
+> $U$: Upper Triangle Matrix  
 
-### Minors of a square matrix
+### Minors of a square matrix  
 $$
 C_{i,j} = (-1)^{i+j}M_{i,j} \\
 \det(A) = \sum_{i=1}^N C_{i,j_0} a_{i,j_0}  =  
 \sum_{j=1}^N C_{i_0,j} a_{i_0,j}
-$$
+$$  
 
 > ex)$\begin{bmatrix}
 \cancel{1}&2&3\\
@@ -424,15 +424,15 @@ $$
 \;\; \rightarrow \;\;
 M_{2,1} = \det \left( \begin{bmatrix}2&3\\8&9\end{bmatrix} \right) 
 \\ 
-i_0=2, \, j_0=1$
+i_0=2, \, j_0=1$  
 
-### Norms on vector spaces
-$$ l_{p}\text{-norm} =\| x\|_{p} = \left[\sum{|x_i|^p}\right] ^{\frac{1}{p}} \,\, (p \geq1)$$
+### Norms on vector spaces  
+$$ l_{p}\text{-norm} =\| x\|_{p} = \left[\sum{|x_i|^p}\right] ^{\frac{1}{p}} \,\, (p \geq1)$$  
 
 $$\| x\|_{1} = \sum_{i=1}^{n} |x_i| \\
  \| x\|_{2}  =\left[\sum_{i=1}^{n} |x_i|^2\right] ^{\frac{1}{2}}\\ 
  \| x\|_{\infty}  =\sup_{i=1 \cdots n} (|x_i|)\\
- \| x\|_{\frac{1}{2}} = \left[\sum_{i=1}^{n} |x_i|^{\frac{1}{2}}\right] ^{2}$$
+ \| x\|_{\frac{1}{2}} = \left[\sum_{i=1}^{n} |x_i|^{\frac{1}{2}}\right] ^{2}$$  
 
 $\text{a.  }
  \| x \|  \geq 0 
@@ -444,18 +444,18 @@ $\text{a.  }
 \| ax \|  = |a|\| x \|
 \\
 \text{d.  }
-\| x - z\|  \geq \| x - y \|  + \| y - z \|$
+\| x - z\|  \geq \| x - y \|  + \| y - z \|$  
 
-### Inner Product
+### Inner Product  
 $$
 \langle a , b \rangle=
 \begin{bmatrix} a_{1}  & a_{2} & \cdots & a_{ n} \end{bmatrix}
 \begin{bmatrix} b_{1} \\ b_{2} \\ \vdots \\ b_{n} \end{bmatrix} 
 = \sum_{i=1}^{n}a_i b_i
 =\| a \|  \|b  \| \cos{\theta}
-$$
+$$  
 
-### Cosine Similarity
+### Cosine Similarity  
 $$\cos{\langle a , b \rangle}
 = \frac{\langle a , b \rangle}{\| a\|_{2} \| b\|_{2}}
 =\frac{
@@ -464,49 +464,49 @@ $$\cos{\langle a , b \rangle}
             \sqrt{   \sum _{i=1}^{n}{a_{i}^{2}} }
             \sqrt{   \sum _{i=1}^{n}{b_{i}^{2}} }
              }
-$$
-- The greater the value of cosine similarity, the more similar between vectors.
+$$  
+- The greater the value of cosine similarity, the more similar between vectors.  
 
-### Projection Matrix
-$$P = A(A^\top A)^{-1}A^\top$$
+### Projection Matrix  
+$$P = A(A^\top A)^{-1}A^\top$$  
 
-### Eigen value, Eigen vector
-**Eigen value**
-$$\lambda = \{\lambda \,| \, (A-\lambda E)x=0, \, x\ne 0\}$$
-**Eigen vector**
-$$x = \{x \,| \, (A-\lambda E)x=0, \, x\ne 0\}$$
-**Condition for Trivial solution about Eigen vector**
-$$det(A-\lambda E)=0$$
-- This is called **Eigenvalue Equation**.
+### Eigen value, Eigen vector  
+**Eigen value**  
+$$\lambda = \{\lambda \,| \, (A-\lambda E)x=0, \, x\ne 0\}$$  
+**Eigen vector**  
+$$x = \{x \,| \, (A-\lambda E)x=0, \, x\ne 0\}$$  
+**Condition for Trivial solution about Eigen vector**  
+$$det(A-\lambda E)=0$$  
+- This is called **Eigenvalue Equation**.  
 
-### Singular Value Decomposition 
-$$A = U\Sigma V^\top$$
+### Singular Value Decomposition  
+$$A = U\Sigma V^\top$$  
 
->$\Sigma \in \mathbf{R}^{N \times M}$
-> - $\Sigma$: Diagonal matrix & All diagonal entries are Positive.
+>$\Sigma \in \mathbf{R}^{N \times M}$  
+> - $\Sigma$: Diagonal matrix & All diagonal entries are Positive.  
 >  
->$U \in \mathbf{R}^{N \times N}$
-> - All column vectors are unit vector & They are each orthogonal.
+>$U \in \mathbf{R}^{N \times N}$  
+> - All column vectors are unit vector & They are each orthogonal.  
 >
->$V \in \mathbf{R}^{M \times M}$
-> - All column vectors are unit vector & They are each orthogonal.
+>$V \in \mathbf{R}^{M \times M}$  
+> - All column vectors are unit vector & They are each orthogonal.  
 
-(1) $A A^\top = UD^2 U^\top$,  $A^\top A = VD^2 V^\top$
-(2) $U^\top U = V^\top V =  I_n$
-(3) $A A^\top u_i = \lambda_i u_i \,\, i=1, 2, \cdots ,n$
-(4) $A^\top A v_i = \lambda_i v_i  \,\, i=1, 2, \cdots ,n$
-(5) $D = \begin{bmatrix} \sqrt{\lambda_1} &  0 & \cdots & 0 \\  0 &  \sqrt{\lambda_2} & \cdots & 0 \\ \vdots & \vdots & \ddots  & \vdots \\ 0 & \cdots & 0 & \sqrt{\lambda_n} \end{bmatrix}$
+(1) $A A^\top = UD^2 U^\top$,  $A^\top A = VD^2 V^\top$  
+(2) $U^\top U = V^\top V =  I_n$  
+(3) $A A^\top u_i = \lambda_i u_i \,\, i=1, 2, \cdots ,n$  
+(4) $A^\top A v_i = \lambda_i v_i  \,\, i=1, 2, \cdots ,n$  
+(5) $D = \begin{bmatrix} \sqrt{\lambda_1} &  0 & \cdots & 0 \\  0 &  \sqrt{\lambda_2} & \cdots & 0 \\ \vdots & \vdots & \ddots  & \vdots \\ 0 & \cdots & 0 & \sqrt{\lambda_n} \end{bmatrix}$  
 
-## Calculus
+## Calculus  
 
-### Taylor Series
+### Taylor Series  
 
-### Lagrange Multiplier
-[Move to 'Optimization' page.](#Lagrange-Multiplier)
+### Lagrange Multiplier  
+[Move to 'Optimization' page.](#Lagrange-Multiplier)  
 
-## Mathematical Statistics
+## Mathematical Statistics  
 
-### Maximum Likelihood Estimation
+### Maximum Likelihood Estimation  
 $$L(\theta)=L(\theta ; x_1, x_2, \cdots , x_n)=f(x_1, x_2, \cdots , x_n ; \theta) 
 \\
 \downarrow \text{ iid}
@@ -519,10 +519,10 @@ $$L(\theta)=L(\theta ; x_1, x_2, \cdots , x_n)=f(x_1, x_2, \cdots , x_n ; \theta
 \\
 \downarrow \text{to find the maximum value of MLE (2)}
 \\ \frac{d}{d \theta} \log{L(\theta ; x_1, x_2, \cdots , x_n)} = 0
-$$
-- **Maximum Likelihood Estimator** $\hat{\theta}=\{\hat{\theta} | \frac{d}{d \theta} \log{L(\theta ; x_1, x_2, \cdots , x_n)} = 0\}$
+$$  
+- **Maximum Likelihood Estimator** $\hat{\theta}=\{\hat{\theta} | \frac{d}{d \theta} \log{L(\theta ; x_1, x_2, \cdots , x_n)} = 0\}$  
 
-### Least Squared Method
+### Least Squared Method  
 $$D = \sum_{}^{} {e_{i}^{2}} = e^\top e=(y-Xb)^\top (y-Xb) 
 \\
 =y^\top y - y^\top Xb - b^\top X^\top y + b^\top X^\top Xb$$
@@ -530,27 +530,27 @@ $$D = \sum_{}^{} {e_{i}^{2}} = e^\top e=(y-Xb)^\top (y-Xb)
 $$\frac{\partial D}{\partial b} = -2X^\top y + 2X^\top Xb = 0
 \\
 \downarrow
-\\X^\top y = X^\top Xb \Rightarrow b=X(X^\top X)^{-1}X^\top y$$
+\\X^\top y = X^\top Xb \Rightarrow b=X(X^\top X)^{-1}X^\top y$$  
 
-## Optimization
+## Optimization  
 
-### Steepest Gradient Descent
-$$x_{k+1} = x_{k} - \mu \nabla f(x_k) = x_{k} - \mu g(x_k)$$
-> $\nabla f(x_k)$: Gradient Vector
-> $\mu$: Step Size
+### Steepest Gradient Descent  
+$$x_{k+1} = x_{k} - \mu \nabla f(x_k) = x_{k} - \mu g(x_k)$$  
+> $\nabla f(x_k)$: Gradient Vector  
+> $\mu$: Step Size  
 
-### Constrained Optimization
+### Constrained Optimization  
 $$
 x^{\ast} = \text{arg} \min_x f(x)
 \,\,\,\,
 (x \in \mathbf{R}^N)
-$$
+$$  
 
 $$
 \text{Constraints Condition : } \,\,
 g_j(x) = 0 \;\; (j=1, \ldots, M)
-$$
-### Lagrange Multiplier
+$$  
+### Lagrange Multiplier  
 
 $$
 h(x_1, x_2, \ldots , x_N, \lambda_1, \ldots , \lambda_M) \\
@@ -569,12 +569,12 @@ f(x) + \sum_{j=1}^M \lambda_j g_j(x)
  \vdots  \\
 \dfrac{\partial h}{\partial \lambda_M} 
 = g_M = 0
-$$
-- Vector to make objective function small: $x_{i}^{*}$
+$$  
+- Vector to make objective function small: $x_{i}^{*}$  
 ___
 ---
-### *End Of Document*
-Please let me know if there are any parts not included.
-It written by [StackEdit](https://stackedit.io/)
+### *End Of Document*  
+Please let me know if there are any parts not included.  
+It written by [StackEdit](https://stackedit.io/)  
 
 
