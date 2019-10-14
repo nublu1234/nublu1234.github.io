@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "직언과 비난을 구분하자"
+title:  "Essential Mathematics 4 Data Science"
 date:   2019-10-14 00:00:00 +0700
 categories: [all, datascience, machinelearning, statistics, math]
 ---
