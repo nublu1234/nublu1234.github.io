@@ -10,6 +10,7 @@ categories: [all, datascience, machinelearning, statistics, math]
 ## Linear Algebra  
 
 ### Vector Space  
+
 $$ \text{(1)} \,
 \boldsymbol{x}+\boldsymbol{y} = \boldsymbol{y}+\boldsymbol{x}
 \\
@@ -34,17 +35,20 @@ c(\boldsymbol{x}+\boldsymbol{y})= c\boldsymbol{x}+c\boldsymbol{y}
 (c_1+c_2)\boldsymbol{y}= c_1\boldsymbol{x}+c_2\boldsymbol{y}
 $$  
 
-### Vector space of functions  
+### Vector space of functions 
+ 
 $$(f_1 + f_2)(x)=f_1(x)+f_2(x)\\ \, \\
 (af)x=af(x)$$  
 
 
 ### Linear Map  
+
 $$f(x_1 + x_2)=f(x_1)+f(x_2) \\ \, \\
 f(ax)=af(x)$$  
 
 
 ### Bases  
+
 $$
 e_k = \begin{bmatrix} 0 \\ \vdots  \\ 0 \\ 1 \\ 0 \\ \vdots  \\ 0 \end{bmatrix} 
 \\ \, \\
@@ -54,6 +58,7 @@ e_k = \begin{bmatrix} 0 \\ \vdots  \\ 0 \\ 1 \\ 0 \\ \vdots  \\ 0 \end{bmatrix}
 $$  
 
 ### Vector & Matrix Multiplication  
+
 $$
 \begin{bmatrix} a_{\cdot 1}  & a_{\cdot 2} & \cdots & a_{\cdot n} \end{bmatrix}
 \begin{bmatrix} x_{1} \\ x_{2} \\ \vdots \\ x_{n} \end{bmatrix} 
