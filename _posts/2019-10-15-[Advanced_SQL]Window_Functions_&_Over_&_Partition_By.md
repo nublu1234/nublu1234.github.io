@@ -29,6 +29,7 @@ FROM Orders o
 ORDER BY o.CustomerID, o.OrderNumber
 LIMIT 10
 ```
+
 | OrderNumber | CustomerID | OrderTotal | TotalByCustomer | TotalOverall | TotalOverall2 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | 
 | 2 | 1001 | 816.00 | 816.00 | 34807.96 | 34807.96 | 
@@ -113,6 +114,7 @@ FROM PurchaseStatistics s
 ORDER BY s.CustomerID, s.PurchaseYear, s.PurchaseMonth
 LIMIT 20
 ```
+
 | CustomerID | PurchaseYear | PurchaseMonth | PurchaseTotal | PurchaseCount | CountByRange1 | CountByRange2 | CountByRange3 | CountByRange4 | CountByRows1 | CountByRows2 | CountByRows3 | CountByRows4 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
 | 1 | 2011 | 1 | 9660.8633 | 12 | 181 | 181 | 1991 | 1991 | 181 | 12 | 1991 | 1991 | 
@@ -147,6 +149,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, SAL
       ,DENSE_RANK( ) OVER (ORDER BY SAL DESC) AS DENSE_RANK_
 FROM EMP
 ```
+
 | JOB | ENAME | MGR | HIREDATE | SAL | RN_ | RANK_ | DENSE_RANK_ | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | 
 | PRESIDENT | KING | \N | 1981-11-17 | 5000 | 1 | 1 | 1 | 
@@ -180,6 +183,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, SAL
       ,MIN(SAL) OVER(PARTITION BY MGR ORDER BY HIREDATE) as MGR_MIN2
 FROM EMP
 ```
+
 | JOB | ENAME | MGR | HIREDATE | SAL | MGR_SUM | MGR_SUM2 | MGR_SUM3 | MGR_MAX | MGR_MIN | MGR_MIN2 | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
 | PRESIDENT | KING | \N | 1981-11-17 | 5000 | 5000 | 5000 | 5000 | 5000 | 5000 | 5000 | 
@@ -214,6 +218,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, SAL
 FROM EMP
 ORDER BY SAL;
 ```
+
 | JOB | ENAME | MGR | HIREDATE | SAL | SIM_CNT0 | SIM_CNT | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | 
 | CLERK | SMITH | 7902 | 1980-12-17 | 800 | 1 | 2 | 
@@ -246,6 +251,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
 FROM EMP
 ORDER BY DEPTNO, SAL DESC
 ```
+
 | JOB | ENAME | MGR | HIREDATE | DEPTNO | SAL | DEPT_RICH | RICH_EMP | DEPT_POOR | DEPT_POOR2 | 
 | --- | --- | ---: | --- | ---: | ---: | --- | --- | --- | --- | 
 | PRESIDENT | KING | \N | 1981-11-17 | 10 | 5000 | KING | KING | KING | MILLER | 
@@ -275,6 +281,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
 FROM EMP
 ORDER BY HIREDATE;
 ```
+
 | JOB | ENAME | MGR | HIREDATE | DEPTNO | SAL | PREV_SAL | PREV_SAL2 | PREV_SAL3 | NEXTHIRED | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- | 
 | CLERK | SMITH | 7902 | 1980-12-17 | 20 | 800 | \N | \N | 0 | 1981-02-20 | 
@@ -302,6 +309,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
 FROM EMP
 ORDER BY SAL DESC
 ```
+
 | JOB | ENAME | MGR | HIREDATE | DEPTNO | SAL | PER_RANK | QUAR_TILE | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | 
 | PRESIDENT | KING | \N | 1981-11-17 | 10 | 5000 | 0 | 1 | 
