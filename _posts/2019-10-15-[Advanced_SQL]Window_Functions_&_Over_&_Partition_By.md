@@ -6,9 +6,9 @@ categories: [all, sql, mysql, data_analysis]
 ---
 
 
-## [Advanced SQL] Window Functions & Over & Partition By
+## [Advanced SQL] Window Functions & Over & Partition By  
 
-### Default Range
+### Default Range  
 ```sql
 SELECT
   o.OrderNumber, o.CustomerID, o.OrderTotal,
@@ -28,7 +28,7 @@ SELECT
 FROM Orders o
 ORDER BY o.CustomerID, o.OrderNumber
 LIMIT 10
-```
+```  
 
 | OrderNumber | CustomerID | OrderTotal | TotalByCustomer | TotalOverall | TotalOverall2 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | 
@@ -41,17 +41,17 @@ LIMIT 10
 | 137 | 1001 | 1235.65 | 6065.34 | 34807.96 | 34807.96 | 
 | 138 | 1001 | 1122.70 | 7188.04 | 34807.96 | 34807.96 | 
 | 151 | 1001 | 276.00 | 7464.04 | 34807.96 | 34807.96 | 
-| 154 | 1001 | 1360.05 | 8824.09 | 34807.96 | 34807.96 | 
+| 154 | 1001 | 1360.05 | 8824.09 | 34807.96 | 34807.96 |   
 
-> BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW: [Start : Now]
-> BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING: [Now : End]
-> BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING: [Start : Now]
-> UNBOUNDED PRECEDING: [Start : Now]
-> UNBOUNDED FOLLOWING: [Now : End]
+> BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW: [Start : Now]  
+> BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING: [Now : End]  
+> BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING: [Start : Now]  
+> UNBOUNDED PRECEDING: [Start : Now]  
+> UNBOUNDED FOLLOWING: [Now : End]  
 
----
+---  
 
-### RANGE *vs* ROWS
+### RANGE *vs* ROWS  
 ```sql
 WITH PurchaseStatistics AS (
 	SELECT 
@@ -113,7 +113,7 @@ SELECT
 FROM PurchaseStatistics s
 ORDER BY s.CustomerID, s.PurchaseYear, s.PurchaseMonth
 LIMIT 20
-```
+```  
 
 | CustomerID | PurchaseYear | PurchaseMonth | PurchaseTotal | PurchaseCount | CountByRange1 | CountByRange2 | CountByRange3 | CountByRange4 | CountByRows1 | CountByRows2 | CountByRows3 | CountByRows4 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
@@ -136,19 +136,19 @@ LIMIT 20
 | 1 | 2012 | 5 | 9631.9369 | 19 | 190 | 190 | 2031 | 2031 | 190 | 80 | 1970 | 2031 | 
 | 1 | 2012 | 6 | 6254.6390 | 12 | 190 | 190 | 2031 | 2031 | 190 | 92 | 1951 | 2031 | 
 | 1 | 2012 | 7 | 10202.2599 | 18 | 190 | 190 | 2031 | 2031 | 190 | 110 | 1939 | 2031 | 
-| 1 | 2012 | 8 | 7106.4336 | 12 | 190 | 190 | 2031 | 2031 | 190 | 122 | 1921 | 2031 | 
+| 1 | 2012 | 8 | 7106.4336 | 12 | 190 | 190 | 2031 | 2031 | 190 | 122 | 1921 | 2031 |   
  
 
----
+---  
 
-### ROW_NUMBER, RANK, DENSE_RANK
+### ROW_NUMBER, RANK, DENSE_RANK  
 ```sql
 SELECT JOB, ENAME, MGR, HIREDATE, SAL
       ,ROW_NUMBER() OVER (ORDER BY SAL DESC) AS RN_
       ,RANK( ) OVER (ORDER BY SAL DESC) AS RANK_
       ,DENSE_RANK( ) OVER (ORDER BY SAL DESC) AS DENSE_RANK_
 FROM EMP
-```
+```  
 
 | JOB | ENAME | MGR | HIREDATE | SAL | RN_ | RANK_ | DENSE_RANK_ | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | 
@@ -165,14 +165,14 @@ FROM EMP
 | SALESMAN | MARTIN | 7698 | 1981-09-28 | 1250 | 11 | 10 | 9 | 
 | CLERK | ADAMS | 7788 | 1983-01-12 | 1100 | 12 | 12 | 10 | 
 | CLERK | JAMES | 7698 | 1981-12-03 | 950 | 13 | 13 | 11 | 
-| CLERK | SMITH | 7902 | 1980-12-17 | 800 | 14 | 14 | 12 | 
+| CLERK | SMITH | 7902 | 1980-12-17 | 800 | 14 | 14 | 12 |   
 
-> ROW_NUMBER: Sequential Row Number
-> RANK, DENSE_RANK: Joint Ranking
+> ROW_NUMBER: Sequential Row Number  
+> RANK, DENSE_RANK: Joint Ranking  
 
 ---
 
-### SUM, MAX, MIN with Partition
+### SUM, MAX, MIN with Partition  
 ```sql
 SELECT JOB, ENAME, MGR, HIREDATE, SAL
       ,SUM(SAL) OVER (PARTITION BY MGR) AS MGR_SUM
@@ -182,7 +182,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, SAL
       ,MIN(SAL) OVER(PARTITION BY MGR) as MGR_MIN
       ,MIN(SAL) OVER(PARTITION BY MGR ORDER BY HIREDATE) as MGR_MIN2
 FROM EMP
-```
+```  
 
 | JOB | ENAME | MGR | HIREDATE | SAL | MGR_SUM | MGR_SUM2 | MGR_SUM3 | MGR_MAX | MGR_MIN | MGR_MIN2 | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
@@ -199,25 +199,25 @@ FROM EMP
 | MANAGER | JONES | 7839 | 1981-04-02 | 2975 | 8275 | 8275 | 5825 | 2975 | 2450 | 2975 | 
 | MANAGER | BLAKE | 7839 | 1981-05-01 | 2850 | 8275 | 5300 | 8275 | 2975 | 2450 | 2850 | 
 | MANAGER | CLARK | 7839 | 1981-06-09 | 2450 | 8275 | 2450 | 5300 | 2975 | 2450 | 2450 | 
-| CLERK | SMITH | 7902 | 1980-12-17 | 800 | 800 | 800 | 800 | 800 | 800 | 800 | 
+| CLERK | SMITH | 7902 | 1980-12-17 | 800 | 800 | 800 | 800 | 800 | 800 | 800 |   
 
-> MGR_SUM: Implement 'GROUP BY & SUM' without using 'GROUP BY'
-> MGR_SUM2: Sequential Partition [Now : End]
-> MGR_SUM3: Sequential Partition [Now - 1  : Now + 1]
-> MGR_MAX: Implement 'GROUP BY & MAX' without using 'GROUP BY'
-> MGR_MIN: Implement 'GROUP BY & MIN' without using 'GROUP BY'
-> MGR_MIN2: Sequential Partition [Start : Now] Using 'PARTITION BY & ORDER BY'
+> MGR_SUM: Implement 'GROUP BY & SUM' without using 'GROUP BY'  
+> MGR_SUM2: Sequential Partition [Now : End]  
+> MGR_SUM3: Sequential Partition [Now - 1  : Now + 1]  
+> MGR_MAX: Implement 'GROUP BY & MAX' without using 'GROUP BY'  
+> MGR_MIN: Implement 'GROUP BY & MIN' without using 'GROUP BY'  
+> MGR_MIN2: Sequential Partition [Start : Now] Using 'PARTITION BY & ORDER BY'  
 
 ---
 
-### COUNT with OVER 
+### COUNT with OVER  
 ```sql
 SELECT JOB, ENAME, MGR, HIREDATE, SAL
       ,COUNT(*) OVER (ORDER BY SAL) AS SIM_CNT0
 		,COUNT(*) OVER (ORDER BY SAL RANGE BETWEEN 50 PRECEDING AND 150 FOLLOWING) AS SIM_CNT 
 FROM EMP
 ORDER BY SAL;
-```
+```  
 
 | JOB | ENAME | MGR | HIREDATE | SAL | SIM_CNT0 | SIM_CNT | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | 
@@ -234,14 +234,14 @@ ORDER BY SAL;
 | MANAGER | JONES | 7839 | 1981-04-02 | 2975 | 11 | 3 | 
 | ANALYST | SCOTT | 7566 | 1982-12-09 | 3000 | 13 | 3 | 
 | ANALYST | FORD | 7566 | 1981-12-03 | 3000 | 13 | 3 | 
-| PRESIDENT | KING | \N | 1981-11-17 | 5000 | 14 | 1 | 
+| PRESIDENT | KING | \N | 1981-11-17 | 5000 | 14 | 1 |   
 
-> SIM_CNT0: Sequential Counting
-> SIM_CNT: Sequential Counting & Range (lower 50, upper 150)
+> SIM_CNT0: Sequential Counting  
+> SIM_CNT: Sequential Counting & Range (lower 50, upper 150)  
 
 ---
 
-### FIRST_VALUE, LAST_VALUE
+### FIRST_VALUE, LAST_VALUE  
 ```sql
 SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
       ,FIRST_VALUE(ENAME) OVER (PARTITION BY DEPTNO ORDER BY SAL DESC ROWS UNBOUNDED PRECEDING) AS DEPT_RICH 
@@ -250,7 +250,7 @@ SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
 		,LAST_VALUE(ENAME) OVER (PARTITION BY DEPTNO ORDER BY SAL DESC ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS DEPT_POOR2
 FROM EMP
 ORDER BY DEPTNO, SAL DESC
-```
+```  
 
 | JOB | ENAME | MGR | HIREDATE | DEPTNO | SAL | DEPT_RICH | RICH_EMP | DEPT_POOR | DEPT_POOR2 | 
 | --- | --- | ---: | --- | ---: | ---: | --- | --- | --- | --- | 
@@ -267,11 +267,11 @@ ORDER BY DEPTNO, SAL DESC
 | SALESMAN | TURNER | 7698 | 1981-09-08 | 30 | 1500 | BLAKE | BLAKE | TURNER | JAMES | 
 | SALESMAN | MARTIN | 7698 | 1981-09-28 | 30 | 1250 | BLAKE | BLAKE | MARTIN | JAMES | 
 | SALESMAN | WARD | 7698 | 1981-02-22 | 30 | 1250 | BLAKE | BLAKE | MARTIN | JAMES | 
-| CLERK | JAMES | 7698 | 1981-12-03 | 30 | 950 | BLAKE | BLAKE | JAMES | JAMES | 
+| CLERK | JAMES | 7698 | 1981-12-03 | 30 | 950 | BLAKE | BLAKE | JAMES | JAMES |  
 
 ---
 
-### LAG, LEAD
+### LAG, LEAD  
 ```sql
 SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
       ,LAG(SAL) OVER (ORDER BY HIREDATE) AS PREV_SAL 
@@ -301,14 +301,14 @@ ORDER BY HIREDATE;
 
 ---
 
-### PERCENT_RANK, NTILE
+### PERCENT_RANK, NTILE  
 ```sql
 SELECT JOB, ENAME, MGR, HIREDATE, DEPTNO, SAL
       ,PERCENT_RANK() OVER (ORDER BY SAL DESC) as PER_RANK
       ,NTILE(4) OVER (ORDER BY SAL DESC) as QUAR_TILE 
 FROM EMP
 ORDER BY SAL DESC
-```
+```  
 
 | JOB | ENAME | MGR | HIREDATE | DEPTNO | SAL | PER_RANK | QUAR_TILE | 
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | 
@@ -325,7 +325,7 @@ ORDER BY SAL DESC
 | SALESMAN | MARTIN | 7698 | 1981-09-28 | 30 | 1250 | 0.6923076923076923 | 3 | 
 | CLERK | ADAMS | 7788 | 1983-01-12 | 20 | 1100 | 0.8461538461538461 | 4 | 
 | CLERK | JAMES | 7698 | 1981-12-03 | 30 | 950 | 0.9230769230769231 | 4 | 
-| CLERK | SMITH | 7902 | 1980-12-17 | 20 | 800 | 1 | 4 | 
+| CLERK | SMITH | 7902 | 1980-12-17 | 20 | 800 | 1 | 4 |   
 
-> PERCENT_RANK: Percentile
-> NTILE: N-tile
+> PERCENT_RANK: Percentile  
+> NTILE: N-tile  
