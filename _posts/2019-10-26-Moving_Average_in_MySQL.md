@@ -26,7 +26,7 @@ SELECT
 FROM Orders o
 ORDER BY o.CustomerID, o.OrderNumber
 LIMIT 10
-```
+```  
 
 | OrderNumber | CustomerID | OrderTotal | TotalByCustomer | TotalOverall | TotalOverall2 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | 
@@ -76,7 +76,7 @@ SELECT
 FROM PurchaseStatistics s
 ORDER BY s.CustomerID, s.PurchaseMonth, s.PurchaseYear
 LIMIT 20
-```
+```  
 
 | CustomerID | PurchaseYear | PurchaseMonth | PurchaseTotal | PreviousMonthTotal | CurrentMonthTotal | NextMonthTotal | MonthOfYearAverage | 
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
