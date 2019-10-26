@@ -6,7 +6,7 @@ categories: [all, data_analysis, mysql, sql]
 ---
 
 
-### Moving Average
+### Moving Average  
 ```sql
 SELECT
   o.OrderNumber, o.CustomerID, o.OrderTotal,
@@ -39,10 +39,10 @@ LIMIT 10
 | 137 | 1001 | 1235.65 | 6065.34 | 34807.96 | 34807.96 | 
 | 138 | 1001 | 1122.70 | 7188.04 | 34807.96 | 34807.96 | 
 | 151 | 1001 | 276.00 | 7464.04 | 34807.96 | 34807.96 | 
-| 154 | 1001 | 1360.05 | 8824.09 | 34807.96 | 34807.96 | 
----
+| 154 | 1001 | 1360.05 | 8824.09 | 34807.96 | 34807.96 |  
+---  
 
-### Advanced Moving Average
+### Advanced Moving Average  
 ```sql
 WITH PurchaseStatistics AS (
 	SELECT 
