@@ -16,6 +16,7 @@ WITH RECURSIVE SeqNumTbl(SeqNum) AS
 SELECT SeqNum 
 FROM SeqNumTbl
 ```  
+
 | SeqNum | 
 | ---: | 
 | 1 | 
@@ -27,4 +28,4 @@ FROM SeqNumTbl
 | 7 | 
 | 8 | 
 | 9 | 
-| 10 | 
+| 10 |   
