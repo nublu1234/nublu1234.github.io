@@ -27,6 +27,7 @@ FROM Orders o
 ORDER BY o.CustomerID, o.OrderNumber
 LIMIT 10
 ```
+
 | OrderNumber | CustomerID | OrderTotal | TotalByCustomer | TotalOverall | TotalOverall2 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | 
 | 2 | 1001 | 816.00 | 816.00 | 34807.96 | 34807.96 | 
@@ -76,6 +77,7 @@ FROM PurchaseStatistics s
 ORDER BY s.CustomerID, s.PurchaseMonth, s.PurchaseYear
 LIMIT 20
 ```
+
 | CustomerID | PurchaseYear | PurchaseMonth | PurchaseTotal | PreviousMonthTotal | CurrentMonthTotal | NextMonthTotal | MonthOfYearAverage | 
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | 
 | 1 | 2011 | 1 | 9660.8633 | \N | 9660.8633 | 5899.8256 | 7780.34445000 | 
