@@ -33,7 +33,7 @@ $\alpha$: $H_0$가 옳지만 기각할 확률(1종 오류)
 $\beta$: $H_1$에 가깝지만 $H_0$를 채택할 확률(2종 오류) 
 
 <!--
-$\alpha = P[H_0: \text{Reject} \, | \, H_0: \text{True}]$: $H_0$가 옳지만 기각할 확률  
+$\alpha = P[H_0: \text{Reject} \, | \, H_0: \text{True}]$: $H_0$에 가깝지만 기각할 확률  
 $\beta = P[H_0: \text{accept} \, | \, H_0: \text{Reject}]$: $H_1$에 가깝지만 $H_0$를 채택할 확률  
 -->
 
