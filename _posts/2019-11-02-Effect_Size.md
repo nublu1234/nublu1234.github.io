@@ -25,8 +25,8 @@ Cohen's d를 시각화한 사이트 [link](https://rpsychologist.com/d3/cohend/)
 
 ### α, β, Statistical Power
 
-![Effect_Size_img1](https://images.squarespace-cdn.com/content/591e58f72994cab66b93f891/1495241679756-N45YXM495Q81FFSSE55I/Essoe-PowerAlpha9.png?content-type=image%2Fpng)  
-![Effect_Size_img2](https://images.squarespace-cdn.com/content/v1/591e58f72994cab66b93f891/1495241678055-YP4TSRS2WVVN374UDK21/ke17ZwdGBToddI8pDm48kLq6S97H2J2IulzdbnSFZyxZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxnBCR0i8XdYBl1mkHhd-RuP-r6LIw7LO947GnRHFuvbAc3goqYrdAlDAWlimUB9hc/Essoe-PowerAlpha10.png?format=750w)  
+![Effect_Size_img1](https://raw.githubusercontent.com/nublu1234/nublu1234.github.io/master/static/img/_posts/Effect_Size/Effect_Size_img1.png)  
+![Effect_Size_img2](https://raw.githubusercontent.com/nublu1234/nublu1234.github.io/master/static/img/_posts/Effect_Size/Effect_Size_img2.png)  
 
 
 $\alpha$: $H_0$가 옳지만 기각할 확률(1종 오류)  
@@ -37,7 +37,7 @@ $\alpha = P[H_0: \text{Reject} \, | \, H_0: \text{True}]$: $H_0$에 가깝지만
 $\beta = P[H_0: \text{accept} \, | \, H_0: \text{Reject}]$: $H_1$에 가깝지만 $H_0$를 채택할 확률  
 -->
 
-![Effect_Size_img3](https://rpsychologist.com/img/stat_power_base.png)  
+![Effect_Size_img3](https://raw.githubusercontent.com/nublu1234/nublu1234.github.io/master/static/img/_posts/Effect_Size/Effect_Size_img3.png)  
 
 $\text{Statistical Power} = 1 - \beta$: $H_1$에 가깝지만 $H_0$를 채택할 확률  
 
