@@ -66,12 +66,11 @@ FROM TEST
   
 위 테이블의 YYYYMM 컬럼을 봐주시기 바랍니다.  
 RANGE와 ROWS에 차이를 보기좋게 설명하기 위해 200807행을 제외하였습니다.  
-RANGE와 ROWS를 통해 해당년월의 이전 3개월동안의 AMT 총합(RNG_PRE3, ROW_PRE3), 이후 3개월동안의 AMT 총합(RNG_FOL3, ROW_FOL3)을 계산하였습니다.  
-다른 부분이 확인이 되시나요?  
+RANGE와 ROWS를 통해 해당년월의 이전 3개월동안의 AMT 총합(RNG_PRE3, ROW_PRE3),  
+이후 3개월동안의 AMT 총합(RNG_FOL3, ROW_FOL3)을 계산하였습니다.  
 
 200804 ~ 200806 구간에서 RNG_FOL3, ROW_FOL3 값 간에 차이가 존재하며  
 200808 ~ 200810 구간에서 RNG_PRE3, ROW_PRE3 값 간에 차이가 존재합니다.  
-왜 이러한 차이가 날까요?  
 
 ROWS는 물리적, RANGE는 논리적으로 데이터를 계산한다는 점에서 두 명령어 간에 차이가 있습니다.  
 200808에서의 RNG_PRE3, ROW_PRE3는 400이라는 값만큼 차이가 납니다.  
