@@ -48,6 +48,7 @@ SELECT YYYYMM
                          AND 3 FOLLOWING) ROW_FOL3
 FROM TEST
 ```  
+
 | YYYYMM | AMT | RNG_PRE3 | RNG_FOL3 | ROW_PRE3 | ROW_FOL3 | 
 | ---: | ---: | ---: | ---: | ---: | ---: | 
 | 200801 | 100 | \N | 900 | \N | 900 | 
