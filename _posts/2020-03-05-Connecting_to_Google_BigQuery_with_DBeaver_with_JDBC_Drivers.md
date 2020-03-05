@@ -5,10 +5,7 @@ date:   2020-03-05 00:00:00 +0700
 categories: [all, sql, bigquery]
 ---
 
-
 # Connecting to Google BigQuery with DBeaver with JDBC Drivers
-
-[TOC]
 
 ## 1. jdbc 드라이버 설치
 https://cloud.google.com/bigquery/providers/simba-drivers
