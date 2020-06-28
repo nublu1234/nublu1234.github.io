@@ -128,9 +128,6 @@ layout: compress
     <!-- Latex2 -->
     <script type="text/x-mathjax-config">
 	
-	<!-- mermaid -->
-	<script src="mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
 	
     MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -142,7 +139,12 @@ layout: compress
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
     });
-</script>  
+    </script> 
+	
+	<script src="mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
+	
   </head>
   <body>
     <div class="container">
