@@ -8,14 +8,14 @@ const config: GatsbyConfig = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteTitle: `Emo zermo`,
+    siteTitleAlt: `이런저런 잡다한 이야기`,
+    siteHeadline: `Emo zehmo - 이런저런 잡다한 이야기`,
+    siteUrl: `https://nublu1234.github.io`,
+    siteDescription: ` `,
     siteImage: `/banner.jpg`,
-    siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    siteLanguage: `ko`,
+    author: `@nublu1234`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -35,12 +35,12 @@ const config: GatsbyConfig = {
         ],
         externalLinks: [
           {
-            name: `Bluesky`,
-            url: `https://bsky.app/profile/lekoarts.de`,
+            name: `Twitter`,
+            url: `https://x.com/nublu1234`,
           },
           {
             name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            url: `https://nublu1234.github.io`,
           },
         ],
       },
