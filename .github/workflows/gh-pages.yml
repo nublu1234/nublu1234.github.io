@@ -9,6 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 이 줄을 추가합니다.
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
