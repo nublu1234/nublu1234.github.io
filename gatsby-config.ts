@@ -51,6 +51,33 @@ const config: GatsbyConfig = {
         output: `/`,
       },
     },
+
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.STRAPI_API_URL || `http://localhost:1337`, // Strapi API 주소
+        collectionTypes: [
+          // Strapi에서 생성한 Collection Type들을 여기에 배열로 나열합니다.
+          // 예시: 'article', 'category' 등
+          `post`, // Gatsby 블로그에서 'Post' 데이터를 가져온다면
+          `author`, // 글 작성자 정보도 있다면
+          // 다른 Collection Type이 있다면 여기에 추가하세요.
+        ],
+        singleTypes: [
+          // Strapi에서 생성한 Single Type이 있다면 여기에 배열로 나열합니다.
+          // 예시: 'about-page', 'global-settings' 등
+          // `homepage`,
+          // `global`,
+        ],
+        queryLimit: 1000, // 한 번에 가져올 항목의 최대 개수 (기본값 100)
+        // Strapi API 토큰이 필요하다면 아래를 추가합니다 (일반적으로 필요하지 않을 수 있음).
+        // If your Strapi API requires authentication (e.g., in production)
+        // You might need to add an API token. Ensure it's read from .env
+        // token: process.env.STRAPI_API_TOKEN,
+      },
+    },
+    // --- Strapi 연동을 위한 플러그인 추가 끝 ---
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -94,12 +121,16 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
+            // serialize 함수 내부:
+            // 1. `query: { site, allPost }` 부분을 `query: { site, allStrapiPost }`로 변경
+            // 2. `query: { allPost: IAllPost; site: { siteMetadata: ISiteMetadata } }` 부분도 `allStrapiPost`로 변경
+            // 3. `allPost.nodes.map` 부분을 `allStrapiPost.nodes.map`으로 변경
             serialize: ({
-              query: { site, allPost },
+              query: { site, allStrapiPost }, // <--- 변경: allPost -> allStrapiPost
             }: {
-              query: { allPost: IAllPost; site: { siteMetadata: ISiteMetadata } }
+              query: { allStrapiPost: IAllPost; site: { siteMetadata: ISiteMetadata } } // <--- 변경: allPost -> allStrapiPost
             }) =>
-              allPost.nodes.map((post) => {
+              allStrapiPost.nodes.map((post) => { // <--- 변경: allPost -> allStrapiPost
                 const url = site.siteMetadata.siteUrl + post.slug
                 const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
 
@@ -112,22 +143,29 @@ const config: GatsbyConfig = {
                   custom_elements: [{ "content:encoded": content }],
                 }
               }),
+            // 쿼리 문자열 부분:
+            // `allPost`를 `allStrapiPost`로 변경
+            // Strapi에 'content' 필드가 있다면 추가하여 RSS 피드에 포함할 수 있습니다.
             query: `{
-  allPost(sort: {date: DESC}) {
+  allStrapiPost(sort: {date: DESC}) { // <--- 변경: allPost -> allStrapiPost
     nodes {
       title
       date(formatString: "MMMM D, YYYY")
       excerpt
       slug
+      // 만약 Strapi에 게시물 본문 내용 필드가 'content'로 있다면 여기 추가
+      // content
     }
   }
 }`,
             output: `rss.xml`,
-            title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+            title: `Emo zehmo - 이런저런 잡다한 이야기`,
           },
         ],
       },
     },
+
+
     // You can remove this plugin if you don't need it
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-statoscope`,
