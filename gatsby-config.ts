@@ -69,7 +69,7 @@ const config: GatsbyConfig = {
           // `homepage`,
           // `global`,
         ],
-        queryLimit: 1000, // 한 번에 가져올 항목의 최대 개수 (기본값 100)
+        queryLimit: 100, // 한 번에 가져올 항목의 최대 개수 (기본값 100)
         // Strapi API 토큰이 필요하다면 아래를 추가합니다 (일반적으로 필요하지 않을 수 있음).
         // If your Strapi API requires authentication (e.g., in production)
         // You might need to add an API token. Ensure it's read from .env
@@ -146,18 +146,19 @@ const config: GatsbyConfig = {
             // 쿼리 문자열 부분:
             // `allPost`를 `allStrapiPost`로 변경
             // Strapi에 'content' 필드가 있다면 추가하여 RSS 피드에 포함할 수 있습니다.
-            query: `{
-  allStrapiPost(sort: {date: DESC}) { // <--- 변경: allPost -> allStrapiPost
-    nodes {
-      title
-      date(formatString: "MMMM D, YYYY")
-      excerpt
-      slug
-      // 만약 Strapi에 게시물 본문 내용 필드가 'content'로 있다면 여기 추가
-      // content
+            query:  `
+  {
+    allStrapiPost(sort: { date: DESC }) {
+      nodes {
+        title
+        date(formatString: "MMMM D, YYYY")
+        excerpt
+        slug
+        content
+      }
     }
   }
-}`,
+`,
             output: `rss.xml`,
             title: `Emo zehmo - 이런저런 잡다한 이야기`,
           },
